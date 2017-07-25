@@ -12,7 +12,8 @@
     <ul class="nav-list">
       <li>
         <a
-          routerLink="/"
+          *ngIf="auth.loggedIn && auth.isAdmin"
+          routerLink="/admin"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }">Events</a>
       </li>
